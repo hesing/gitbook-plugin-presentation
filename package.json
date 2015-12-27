@@ -1,0 +1,26 @@
+{
+  "name": "gitbook-plugin-presentation",
+  "version": "1.0.0",
+  "description": "Adding presentation to gitbook",
+  "main": "index.js",
+  "engines": {
+    "gitbook": "*"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hesing/gitbook-plugin-presentation.git"
+  },
+  "keywords": [
+    "gitbook",
+    "presentation"
+  ],
+  "author": "Hemant",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hesing/gitbook-plugin-presentation/issues"
+  },
+  "homepage": "https://github.com/hesing/gitbook-plugin-presentation#readme"
+}
