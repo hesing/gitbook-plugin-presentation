@@ -36,12 +36,12 @@ require(["gitbook", "jquery"], function(gitbook, $) {
             });
         }
 
-        $(window).off('keyup').on("keyup", function(event) {
-            if (event.which === 188) {
-                getPrev();
-            } else if (event.which === 190) {
-                getNext();
-            }
-        });    
+        gitbook.keyboard.bind(['right'], function() {
+            getNext();
+        });
+
+        gitbook.keyboard.bind(['left'], function() {
+            getPrev();
+        });
     });
 });
