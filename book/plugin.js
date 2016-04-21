@@ -1,8 +1,4 @@
 require(["gitbook", "jquery"], function(gitbook, $) {
-    gitbook.events.bind("start", function(e, config) {
-
-    });
-
     gitbook.events.bind("page.change", function() {
         var $pageWrapper = $('.page-wrapper'),
         	$headers = $pageWrapper.find('h1:not(.search-results-title), h2'),
