@@ -1,11 +1,7 @@
 require(["gitbook", "jquery"], function(gitbook, $) {
-    gitbook.events.bind("start", function(e, config) {
-
-    });
-
     gitbook.events.bind("page.change", function() {
         var $pageWrapper = $('.page-wrapper'),
-        	$headers = $pageWrapper.find('h1, h2'),
+        	$headers = $pageWrapper.find('h1:not(.search-results-title), h2'),
         	total = $headers.length;
 
         $headers.each(function(index) {
@@ -36,12 +32,12 @@ require(["gitbook", "jquery"], function(gitbook, $) {
             });
         }
 
-        $(window).off('keyup').on("keyup", function(event) {
-            if (event.which === 188) {
-                getPrev();
-            } else if (event.which === 190) {
-                getNext();
-            }
-        });    
+        gitbook.keyboard.bind(['right'], function() {
+            getNext();
+        });
+
+        gitbook.keyboard.bind(['left'], function() {
+            getPrev();
+        });
     });
 });
